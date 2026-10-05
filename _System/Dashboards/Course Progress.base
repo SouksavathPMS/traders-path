@@ -1,0 +1,87 @@
+# Course Progress · Trader's Path (C8, Oct 2026)
+# Lists every lesson note (notes with `id` and `phase` properties, outside _System).
+# Tick "Done", rate your confidence 1-5 and set a next-review date right in the table;
+# Obsidian saves them as properties (my_done, my_confidence, my_next_review) in the lesson note.
+# They don't change the lesson text or the website.
+filters:
+  and:
+    - file.hasProperty("id")
+    - file.hasProperty("phase")
+    - not:
+        - file.inFolder("_System")
+formulas:
+  lesson_no: 'number(id.split(".").slice(1).join(""))'
+properties:
+  note.id:
+    displayName: Lesson
+  note.phase:
+    displayName: Phase
+  note.my_done:
+    displayName: Done
+  note.my_confidence:
+    displayName: Confidence (1-5)
+  note.my_next_review:
+    displayName: Next review
+  formula.lesson_no:
+    displayName: "#"
+views:
+  - type: table
+    name: All lessons
+    groupBy:
+      property: note.phase
+      direction: ASC
+    order:
+      - note.id
+      - file.name
+      - note.my_done
+      - note.my_confidence
+      - note.my_next_review
+    sort:
+      - property: note.phase
+        direction: ASC
+      - property: formula.lesson_no
+        direction: ASC
+    summaries:
+      note.my_done: Checked
+  - type: table
+    name: Next up
+    filters:
+      and:
+        - 'my_done != true'
+    order:
+      - note.id
+      - file.name
+      - note.my_confidence
+    sort:
+      - property: note.phase
+        direction: ASC
+      - property: formula.lesson_no
+        direction: ASC
+    limit: 10
+  - type: table
+    name: Due for review
+    filters:
+      and:
+        - 'my_next_review <= today()'
+    order:
+      - note.my_next_review
+      - note.id
+      - file.name
+      - note.my_confidence
+    sort:
+      - property: note.my_next_review
+        direction: ASC
+  - type: table
+    name: Low confidence
+    filters:
+      and:
+        - 'my_done == true'
+        - 'my_confidence <= 2'
+    order:
+      - note.id
+      - file.name
+      - note.my_confidence
+      - note.my_next_review
+    sort:
+      - property: note.my_confidence
+        direction: ASC

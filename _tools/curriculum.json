@@ -1,0 +1,762 @@
+{
+  "site": {
+    "title": {
+      "en": "Trader's Path",
+      "th": "เส้นทางนักเทรด"
+    },
+    "tagline": {
+      "en": "From your first candle to Wall Street macro — one step at a time.",
+      "th": "จากแท่งเทียนแรก สู่มหภาคระดับวอลล์สตรีท — ทีละขั้น อย่างมีระบบ"
+    }
+  },
+  "phases": [
+    {
+      "n": 0,
+      "slug": "00-playing-field",
+      "folder": "00 Markets, Brokers & News",
+      "layer": "base",
+      "title": {
+        "en": "The Playing Field: Markets, Brokers & News",
+        "th": "สนามแข่ง: ตลาด โบรกเกอร์ และข่าว"
+      },
+      "goal": {
+        "en": "Know where you are trading, who stands between you and the market, and what news can move it.",
+        "th": "รู้ว่าคุณเทรดที่ไหน ใครอยู่ระหว่างคุณกับตลาด และข่าวอะไรที่ขยับตลาดได้"
+      },
+      "lessons": [
+        {
+          "id": "0.1",
+          "en": "Why Exchanges & Brokers Exist",
+          "th": "ทำไมต้องมีตลาดหลักทรัพย์และโบรกเกอร์"
+        },
+        {
+          "id": "0.2",
+          "en": "Instruments & Leverage: Spot, CFD, Futures, ETF",
+          "th": "เครื่องมือและเลเวอเรจ: Spot, CFD, Futures, ETF"
+        },
+        {
+          "id": "0.3",
+          "en": "Forex: How Currencies Trade",
+          "th": "ฟอเร็กซ์: ค่าเงินซื้อขายกันอย่างไร"
+        },
+        {
+          "id": "0.4",
+          "en": "Gold (XAU/USD)",
+          "th": "ทองคำ (XAU/USD)"
+        },
+        {
+          "id": "0.5",
+          "en": "Stocks & Indices",
+          "th": "หุ้นและดัชนี"
+        },
+        {
+          "id": "0.6",
+          "en": "Case Study: Nvidia",
+          "th": "กรณีศึกษา: Nvidia"
+        },
+        {
+          "id": "0.7",
+          "en": "Crypto: Bitcoin, Ether & Stablecoins",
+          "th": "คริปโต: Bitcoin, Ether และ Stablecoin"
+        },
+        {
+          "id": "0.8",
+          "en": "What Moves Markets: News & the Economic Calendar",
+          "th": "อะไรขยับตลาด: ข่าวและปฏิทินเศรษฐกิจ"
+        },
+        {
+          "id": "0.9",
+          "en": "Staying Safe: Scams, Fake Brokers & Signal Groups",
+          "th": "เอาตัวรอด: กลโกง โบรกเกอร์ปลอม และกลุ่มสัญญาณ"
+        },
+        {
+          "id": "0.11",
+          "en": "Personal Finance First: Emergency Fund, Debt & Money You Can Afford to Risk",
+          "th": "การเงินส่วนตัวมาก่อน: เงินสำรองฉุกเฉิน หนี้ และเงินที่เสี่ยงได้"
+        },
+        {
+          "id": "0.12",
+          "en": "Short Selling: How It Works, Borrow Fees & Short Squeezes",
+          "th": "การขายชอร์ต: ทำงานอย่างไร ค่ายืมหุ้น และ Short squeeze"
+        },
+        {
+          "id": "0.13",
+          "en": "TradingView Basics: Charts, Drawing Tools, Indicators & Alerts",
+          "th": "พื้นฐาน TradingView: กราฟ เครื่องมือวาด อินดิเคเตอร์ และการแจ้งเตือน"
+        },
+        {
+          "id": "0.14",
+          "en": "Economic Calendars & Stock Screeners in Practice",
+          "th": "ใช้งานปฏิทินเศรษฐกิจและ Stock Screener จริง"
+        },
+        {
+          "id": "0.15",
+          "en": "Prop Firms & Funded Challenges: How They Work and the Real Odds",
+          "th": "Prop Firm และ Challenge บัญชี Funded: ทำงานอย่างไร และโอกาสจริง"
+        },
+        {
+          "id": "0.10",
+          "en": "Checkpoint: Phase 0 Review",
+          "th": "ด่านทดสอบ: ทบทวนเฟส 0"
+        }
+      ]
+    },
+    {
+      "n": 1,
+      "slug": "01-foundations",
+      "folder": "01 Foundations",
+      "layer": "base",
+      "title": {
+        "en": "Foundations: The Trader's Mind & The Language of Price",
+        "th": "พื้นฐาน: ความคิดแบบนักเทรด และภาษาของราคา"
+      },
+      "goal": {
+        "en": "Think in probabilities and read what every candle is saying.",
+        "th": "คิดแบบความน่าจะเป็น และอ่านให้ออกว่าแท่งเทียนแต่ละแท่งกำลังบอกอะไร"
+      },
+      "lessons": [
+        {
+          "id": "1.1",
+          "en": "Think Like a Trader",
+          "th": "คิดแบบนักเทรด"
+        },
+        {
+          "id": "1.2",
+          "en": "How Markets Move",
+          "th": "ตลาดเคลื่อนที่ได้อย่างไร"
+        },
+        {
+          "id": "1.3",
+          "en": "Candlestick Anatomy",
+          "th": "กายวิภาคของแท่งเทียน"
+        },
+        {
+          "id": "1.4",
+          "en": "Candlestick Patterns in Context",
+          "th": "รูปแบบแท่งเทียนในบริบท"
+        },
+        {
+          "id": "1.5",
+          "en": "Timeframes & Top-Down Analysis",
+          "th": "ไทม์เฟรม และการวิเคราะห์จากบนลงล่าง"
+        },
+        {
+          "id": "1.6",
+          "en": "Checkpoint: Phase 1 Review",
+          "th": "ด่านทดสอบ: ทบทวนเฟส 1"
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "slug": "02-market-structure",
+      "folder": "02 Market Structure",
+      "layer": "base",
+      "title": {
+        "en": "Market Structure",
+        "th": "โครงสร้างตลาด"
+      },
+      "goal": {
+        "en": "Know who is in control: trend, range, and the exact moment it changes.",
+        "th": "รู้ว่าใครคุมตลาด: เทรนด์ ไซด์เวย์ และจังหวะที่มันเปลี่ยน"
+      },
+      "lessons": [
+        {
+          "id": "2.1",
+          "en": "Swings: HH, HL, LH, LL",
+          "th": "สวิง: HH, HL, LH, LL"
+        },
+        {
+          "id": "2.2",
+          "en": "Trends, Ranges & Market Cycles",
+          "th": "เทรนด์ ไซด์เวย์ และวัฏจักรตลาด"
+        },
+        {
+          "id": "2.3",
+          "en": "Break of Structure & Change of Character",
+          "th": "BOS และ CHoCH"
+        },
+        {
+          "id": "2.4",
+          "en": "Support, Resistance & Role Reversal",
+          "th": "แนวรับ แนวต้าน และการสลับบทบาท"
+        },
+        {
+          "id": "2.5",
+          "en": "Supply & Demand Zones",
+          "th": "โซนอุปสงค์และอุปทาน"
+        },
+        {
+          "id": "2.6",
+          "en": "Multi-Timeframe Structure",
+          "th": "โครงสร้างหลายไทม์เฟรม"
+        },
+        {
+          "id": "2.8",
+          "en": "Indicators: Moving Averages, RSI, MACD, ATR, Volume",
+          "th": "อินดิเคเตอร์: ค่าเฉลี่ยเคลื่อนที่ RSI MACD ATR และวอลุ่ม"
+        },
+        {
+          "id": "2.9",
+          "en": "Classic Chart Patterns: Double Tops, Head & Shoulders, Triangles, Flags",
+          "th": "รูปแบบกราฟคลาสสิก: ยอดคู่ หัวไหล่ สามเหลี่ยม ธง"
+        },
+        {
+          "id": "2.7",
+          "en": "Checkpoint: Phase 2 Review",
+          "th": "ด่านทดสอบ: ทบทวนเฟส 2"
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "slug": "03-risk-money",
+      "folder": "03 Risk & Money Management",
+      "layer": "base",
+      "title": {
+        "en": "Risk & Money Management",
+        "th": "การบริหารความเสี่ยงและเงินทุน"
+      },
+      "goal": {
+        "en": "Survive first. Size every trade so no single loss can hurt you.",
+        "th": "อยู่รอดก่อน กำหนดขนาดทุกไม้ให้ไม่มีการขาดทุนครั้งไหนทำร้ายคุณได้"
+      },
+      "lessons": [
+        {
+          "id": "3.1",
+          "en": "Why Risk Comes First",
+          "th": "ทำไมความเสี่ยงต้องมาก่อน"
+        },
+        {
+          "id": "3.2",
+          "en": "Position Sizing",
+          "th": "การคำนวณขนาดโพซิชัน"
+        },
+        {
+          "id": "3.3",
+          "en": "R-Multiples & Risk:Reward",
+          "th": "R-Multiple และ Risk:Reward"
+        },
+        {
+          "id": "3.4",
+          "en": "Win Rate x R = Expectancy",
+          "th": "อัตราชนะ x R = ค่าคาดหวัง"
+        },
+        {
+          "id": "3.5",
+          "en": "Stop Loss & Take Profit Placement",
+          "th": "การวาง Stop Loss และ Take Profit"
+        },
+        {
+          "id": "3.6",
+          "en": "Drawdown Math & Recovery",
+          "th": "คณิตศาสตร์ของ Drawdown และการฟื้นตัว"
+        },
+        {
+          "id": "3.8",
+          "en": "Trade Management: Partial Profits, Trailing Stops, Scaling In & Out",
+          "th": "การบริหารเทรด: ทำกำไรบางส่วน เลื่อน Stop และการเพิ่ม-ลดโพซิชัน"
+        },
+        {
+          "id": "3.9",
+          "en": "Portfolio Risk: Correlation, Open Risk, Kelly & Monte Carlo Drawdowns",
+          "th": "ความเสี่ยงระดับพอร์ต: สหสัมพันธ์ ความเสี่ยงที่เปิดอยู่ Kelly และ Drawdown แบบ Monte Carlo"
+        },
+        {
+          "id": "3.7",
+          "en": "Checkpoint: Phase 3 Review",
+          "th": "ด่านทดสอบ: ทบทวนเฟส 3"
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "slug": "04-psychology",
+      "folder": "04 Psychology & Execution",
+      "layer": "base",
+      "title": {
+        "en": "Psychology & Execution",
+        "th": "จิตวิทยาและการลงมือเทรด"
+      },
+      "goal": {
+        "en": "Turn knowledge into consistent action with a plan, a routine and a journal.",
+        "th": "เปลี่ยนความรู้ให้เป็นการลงมือที่สม่ำเสมอ ด้วยแผน กิจวัตร และบันทึกการเทรด"
+      },
+      "lessons": [
+        {
+          "id": "4.1",
+          "en": "Fear, Greed, Hope & Regret",
+          "th": "ความกลัว ความโลภ ความหวัง และความเสียดาย"
+        },
+        {
+          "id": "4.2",
+          "en": "Cognitive Biases That Cost Money",
+          "th": "อคติทางความคิดที่ทำให้เสียเงิน"
+        },
+        {
+          "id": "4.3",
+          "en": "The Trading Plan & If-Then Rules",
+          "th": "แผนการเทรด และกฎ ถ้า-แล้ว"
+        },
+        {
+          "id": "4.4",
+          "en": "Daily Routine: Before, During, After",
+          "th": "กิจวัตรประจำวัน: ก่อน ระหว่าง หลัง"
+        },
+        {
+          "id": "4.5",
+          "en": "Journaling & The Review Loop",
+          "th": "การจดบันทึก และวงจรการทบทวน"
+        },
+        {
+          "id": "4.6",
+          "en": "Losing Streaks & Tilt",
+          "th": "การแพ้ติดกัน และอาการหัวร้อน (Tilt)"
+        },
+        {
+          "id": "4.7",
+          "en": "Checkpoint: Phase 4 Review",
+          "th": "ด่านทดสอบ: ทบทวนเฟส 4"
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "slug": "05-liquidity-ict",
+      "folder": "05 Liquidity & ICT",
+      "layer": "surface",
+      "title": {
+        "en": "Liquidity & ICT Concepts",
+        "th": "สภาพคล่อง และแนวคิด ICT"
+      },
+      "goal": {
+        "en": "See where the stops are, why price hunts them, and how ICT models the move.",
+        "th": "มองเห็นว่า Stop อยู่ตรงไหน ทำไมราคาไปล่ามัน และ ICT อธิบายการเคลื่อนไหวนั้นอย่างไร"
+      },
+      "lessons": [
+        {
+          "id": "5.1",
+          "en": "What Liquidity Really Is",
+          "th": "สภาพคล่องที่แท้จริงคืออะไร"
+        },
+        {
+          "id": "5.2",
+          "en": "Liquidity Sweeps & Stop Hunts",
+          "th": "การกวาดสภาพคล่อง และการล่า Stop"
+        },
+        {
+          "id": "5.3",
+          "en": "Dealing Range: Premium & Discount",
+          "th": "Dealing Range: โซนแพงและโซนถูก"
+        },
+        {
+          "id": "5.4",
+          "en": "Fair Value Gaps (FVG)",
+          "th": "Fair Value Gap (FVG)"
+        },
+        {
+          "id": "5.5",
+          "en": "Order Blocks & Breakers",
+          "th": "Order Block และ Breaker"
+        },
+        {
+          "id": "5.6",
+          "en": "Time: Sessions, Killzones & Quarterly Theory",
+          "th": "เวลา: เซสชัน Killzone และ Quarterly Theory"
+        },
+        {
+          "id": "5.7",
+          "en": "An ICT Model Setup, Step by Step",
+          "th": "ตัวอย่างเซ็ตอัพ ICT ทีละขั้น"
+        },
+        {
+          "id": "5.8",
+          "en": "Checkpoint: Phase 5 Review",
+          "th": "ด่านทดสอบ: ทบทวนเฟส 5"
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "slug": "06-fib-elliott-stdev",
+      "folder": "06 Fibonacci, Elliott Wave & Std Dev",
+      "layer": "shallow",
+      "title": {
+        "en": "Measuring the Market: Fibonacci, Elliott Wave & Std Dev",
+        "th": "วัดตลาด: ฟีโบนัชชี คลื่นเอลเลียต และส่วนเบี่ยงเบนมาตรฐาน"
+      },
+      "goal": {
+        "en": "Measure how far moves go and where waves are likely to end.",
+        "th": "วัดว่าการเคลื่อนไหวจะไปได้ไกลแค่ไหน และคลื่นน่าจะจบตรงไหน"
+      },
+      "lessons": [
+        {
+          "id": "6.1",
+          "en": "Fibonacci Retracements & Extensions",
+          "th": "ฟีโบนัชชี รีเทรซเมนต์ และเอ็กซ์เทนชัน"
+        },
+        {
+          "id": "6.2",
+          "en": "Elliott Wave: The 5-3 Structure",
+          "th": "คลื่นเอลเลียต: โครงสร้าง 5-3"
+        },
+        {
+          "id": "6.3",
+          "en": "Elliott Wave Rules & Guidelines",
+          "th": "กฎและแนวทางของคลื่นเอลเลียต"
+        },
+        {
+          "id": "6.4",
+          "en": "Corrective Patterns: Zigzag, Flat, Triangle",
+          "th": "คลื่นปรับฐาน: Zigzag, Flat, Triangle"
+        },
+        {
+          "id": "6.5",
+          "en": "Elliott + Fibonacci Confluence",
+          "th": "เอลเลียต + ฟีโบนัชชี เพื่อหาจุดซ้อนทับ"
+        },
+        {
+          "id": "6.6",
+          "en": "Standard Deviation Projections",
+          "th": "การประมาณการด้วยส่วนเบี่ยงเบนมาตรฐาน"
+        },
+        {
+          "id": "6.7",
+          "en": "Checkpoint: Phase 6 Review",
+          "th": "ด่านทดสอบ: ทบทวนเฟส 6"
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "slug": "07-orderflow-amt",
+      "folder": "07 Orderflow & Auction Market Theory",
+      "layer": "mid",
+      "title": {
+        "en": "Orderflow & Auction Market Theory",
+        "th": "Orderflow และทฤษฎีตลาดประมูล (AMT)"
+      },
+      "goal": {
+        "en": "Look inside the candle: who is aggressive, who is absorbing, where value is.",
+        "th": "มองเข้าไปในแท่งเทียน: ใครรุก ใครรับ และมูลค่าอยู่ตรงไหน"
+      },
+      "lessons": [
+        {
+          "id": "7.1",
+          "en": "Auction Market Theory: Balance & Imbalance",
+          "th": "ทฤษฎีตลาดประมูล: สมดุลและไม่สมดุล"
+        },
+        {
+          "id": "7.2",
+          "en": "Volume Profile: POC, VAH, VAL",
+          "th": "Volume Profile: POC, VAH, VAL"
+        },
+        {
+          "id": "7.3",
+          "en": "Level 2 & The Order Book (DOM)",
+          "th": "Level 2 และสมุดคำสั่งซื้อขาย (DOM)"
+        },
+        {
+          "id": "7.4",
+          "en": "Footprint Charts & Delta",
+          "th": "Footprint Chart และ Delta"
+        },
+        {
+          "id": "7.5",
+          "en": "Liquidity Heatmaps",
+          "th": "Heatmap สภาพคล่อง"
+        },
+        {
+          "id": "7.6",
+          "en": "Absorption & Exhaustion Setups",
+          "th": "เซ็ตอัพ Absorption และ Exhaustion"
+        },
+        {
+          "id": "7.7",
+          "en": "Checkpoint: Phase 7 Review",
+          "th": "ด่านทดสอบ: ทบทวนเฟส 7"
+        }
+      ]
+    },
+    {
+      "n": 8,
+      "slug": "08-options-gamma",
+      "folder": "08 Options & Dealer Positioning",
+      "layer": "deep",
+      "title": {
+        "en": "Options & Dealer Positioning (GEX)",
+        "th": "ออปชัน และสถานะของดีลเลอร์ (GEX)"
+      },
+      "goal": {
+        "en": "Understand how option hedging creates walls, magnets and volatility regimes.",
+        "th": "เข้าใจว่าการเฮดจ์ออปชันสร้างกำแพง แม่เหล็กราคา และสภาวะความผันผวนได้อย่างไร"
+      },
+      "lessons": [
+        {
+          "id": "8.1",
+          "en": "Options Basics: Calls & Puts",
+          "th": "พื้นฐานออปชัน: Call และ Put"
+        },
+        {
+          "id": "8.2",
+          "en": "The Greeks",
+          "th": "ค่ากรีก (The Greeks)"
+        },
+        {
+          "id": "8.3",
+          "en": "Market Makers & Delta Hedging",
+          "th": "Market Maker และการเฮดจ์เดลต้า"
+        },
+        {
+          "id": "8.4",
+          "en": "Gamma Exposure (GEX) & The Gamma Flip",
+          "th": "Gamma Exposure (GEX) และจุด Gamma Flip"
+        },
+        {
+          "id": "8.5",
+          "en": "Call Walls & Put Walls",
+          "th": "Call Wall และ Put Wall"
+        },
+        {
+          "id": "8.6",
+          "en": "Vanna (VEX) & Charm",
+          "th": "Vanna (VEX) และ Charm"
+        },
+        {
+          "id": "8.7",
+          "en": "Reading Options Flow",
+          "th": "การอ่าน Options Flow"
+        },
+        {
+          "id": "8.8",
+          "en": "Checkpoint: Phase 8 Review",
+          "th": "ด่านทดสอบ: ทบทวนเฟส 8"
+        }
+      ]
+    },
+    {
+      "n": 9,
+      "slug": "09-quant",
+      "folder": "09 Quant & Data Analysis",
+      "layer": "abyss",
+      "title": {
+        "en": "Quant & Data Analysis",
+        "th": "Quant และการวิเคราะห์ข้อมูล"
+      },
+      "goal": {
+        "en": "Prove your edge with data instead of feelings.",
+        "th": "พิสูจน์ความได้เปรียบของคุณด้วยข้อมูล ไม่ใช่ความรู้สึก"
+      },
+      "lessons": [
+        {
+          "id": "9.1",
+          "en": "Statistics for Traders",
+          "th": "สถิติสำหรับนักเทรด"
+        },
+        {
+          "id": "9.2",
+          "en": "Probability & Expected Value",
+          "th": "ความน่าจะเป็น และค่าคาดหวัง"
+        },
+        {
+          "id": "9.3",
+          "en": "Backtesting Without Fooling Yourself",
+          "th": "แบ็กเทสต์อย่างไรไม่ให้หลอกตัวเอง"
+        },
+        {
+          "id": "9.4",
+          "en": "Tick Data & Market Internals ($TICK)",
+          "th": "ข้อมูลระดับ Tick และ Market Internals ($TICK)"
+        },
+        {
+          "id": "9.5",
+          "en": "A Simple Quant Strategy in Python",
+          "th": "กลยุทธ์ Quant แบบง่ายด้วย Python"
+        },
+        {
+          "id": "9.6",
+          "en": "Performance Metrics: Sharpe, Sortino, Profit Factor",
+          "th": "ตัวชี้วัดผลงาน: Sharpe, Sortino, Profit Factor"
+        },
+        {
+          "id": "9.7",
+          "en": "Checkpoint: Phase 9 Review",
+          "th": "ด่านทดสอบ: ทบทวนเฟส 9"
+        }
+      ]
+    },
+    {
+      "n": 10,
+      "slug": "10-macro-investing",
+      "folder": "10 Macro, Wall Street & Investing",
+      "layer": "floor",
+      "title": {
+        "en": "Macro, Wall Street & Investing",
+        "th": "เศรษฐกิจมหภาค วอลล์สตรีท และการลงทุน"
+      },
+      "goal": {
+        "en": "See the big picture that moves every chart, and build long-term wealth.",
+        "th": "มองภาพใหญ่ที่ขับเคลื่อนทุกกราฟ และสร้างความมั่งคั่งระยะยาว"
+      },
+      "lessons": [
+        {
+          "id": "10.1",
+          "en": "The Business Cycle",
+          "th": "วัฏจักรเศรษฐกิจ"
+        },
+        {
+          "id": "10.2",
+          "en": "Central Banks, Rates & Liquidity (QE/QT)",
+          "th": "ธนาคารกลาง ดอกเบี้ย และสภาพคล่อง (QE/QT)"
+        },
+        {
+          "id": "10.3",
+          "en": "Economic Data & Event Risk",
+          "th": "ข้อมูลเศรษฐกิจ และความเสี่ยงจากเหตุการณ์"
+        },
+        {
+          "id": "10.4",
+          "en": "Intermarket Analysis",
+          "th": "การวิเคราะห์ระหว่างตลาด"
+        },
+        {
+          "id": "10.5",
+          "en": "How Wall Street Works",
+          "th": "วอลล์สตรีททำงานอย่างไร"
+        },
+        {
+          "id": "10.6",
+          "en": "Fundamental Analysis & Valuation",
+          "th": "การวิเคราะห์ปัจจัยพื้นฐาน และการประเมินมูลค่า"
+        },
+        {
+          "id": "10.7",
+          "en": "Portfolio Construction & Asset Allocation",
+          "th": "การสร้างพอร์ต และการจัดสรรสินทรัพย์"
+        },
+        {
+          "id": "10.9",
+          "en": "Index Funds & ETFs: Owning the Whole Market",
+          "th": "กองทุนดัชนีและ ETF: เป็นเจ้าของทั้งตลาด"
+        },
+        {
+          "id": "10.10",
+          "en": "DCA vs Lump Sum",
+          "th": "DCA หรือลงทุนก้อนเดียว"
+        },
+        {
+          "id": "10.11",
+          "en": "Bonds: Lending for Interest",
+          "th": "พันธบัตร: ให้กู้เพื่อรับดอกเบี้ย"
+        },
+        {
+          "id": "10.12",
+          "en": "Dividends & Dividend Investing",
+          "th": "เงินปันผล และการลงทุนเน้นปันผล"
+        },
+        {
+          "id": "10.13",
+          "en": "REITs: Owning Property Through the Market",
+          "th": "REIT: เป็นเจ้าของอสังหาฯ ผ่านตลาดหลักทรัพย์"
+        },
+        {
+          "id": "10.14",
+          "en": "Investing from Thailand & Laos: SET, LSX, US Stocks & Taxes",
+          "th": "ลงทุนจากไทยและลาว: SET, LSX, หุ้นสหรัฐฯ และภาษี"
+        },
+        {
+          "id": "10.8",
+          "en": "Checkpoint: Phase 10 Review",
+          "th": "ด่านทดสอบ: ทบทวนเฟส 10"
+        }
+      ]
+    },
+    {
+      "n": 11,
+      "slug": "11-capstone",
+      "folder": "11 Capstone",
+      "layer": "floor",
+      "title": {
+        "en": "Capstone: Your Own System",
+        "th": "บทสรุป: สร้างระบบของคุณเอง"
+      },
+      "goal": {
+        "en": "Assemble everything into a written trading plan and investment policy.",
+        "th": "รวมทุกอย่างเป็นแผนการเทรดและนโยบายการลงทุนที่เขียนเป็นลายลักษณ์อักษร"
+      },
+      "lessons": [
+        {
+          "id": "11.1",
+          "en": "Write Your Trading Plan",
+          "th": "เขียนแผนการเทรดของคุณ"
+        },
+        {
+          "id": "11.2",
+          "en": "Write Your Investment Policy",
+          "th": "เขียนนโยบายการลงทุนของคุณ"
+        },
+        {
+          "id": "11.3",
+          "en": "The Lifelong Learning Loop",
+          "th": "วงจรการเรียนรู้ตลอดชีวิต"
+        }
+      ]
+    },
+    {
+      "n": 12,
+      "slug": "12-history",
+      "folder": "12 History Lessons",
+      "layer": "floor",
+      "title": {
+        "en": "History Lessons: Crashes, Shocks & Collapses",
+        "th": "บทเรียนจากประวัติศาสตร์: ตลาดถล่ม ช็อก และการล่มสลาย"
+      },
+      "goal": {
+        "en": "See every rule of this course tested by real events, and what a disciplined trader or investor would have done.",
+        "th": "เห็นกฎทุกข้อของหลักสูตรนี้ถูกทดสอบโดยเหตุการณ์จริง และสิ่งที่นักเทรดหรือนักลงทุนที่มีวินัยจะทำ"
+      },
+      "lessons": [
+        {
+          "id": "12.1",
+          "en": "Black Monday 1987",
+          "th": "แบล็กมันเดย์ 1987"
+        },
+        {
+          "id": "12.2",
+          "en": "The 2008 Financial Crisis",
+          "th": "วิกฤตการเงินปี 2008"
+        },
+        {
+          "id": "12.3",
+          "en": "The Swiss Franc Shock (2015)",
+          "th": "ช็อกค่าเงินฟรังก์สวิส (2015)"
+        },
+        {
+          "id": "12.4",
+          "en": "The COVID Crash (2020)",
+          "th": "ตลาดถล่มช่วงโควิด (2020)"
+        },
+        {
+          "id": "12.5",
+          "en": "The 2022 Rate Shock",
+          "th": "ช็อกดอกเบี้ยปี 2022"
+        },
+        {
+          "id": "12.6",
+          "en": "The FTX Collapse (2022)",
+          "th": "การล่มสลายของ FTX (2022)"
+        },
+        {
+          "id": "12.7",
+          "en": "Silicon Valley Bank (2023)",
+          "th": "Silicon Valley Bank (2023)"
+        },
+        {
+          "id": "12.8",
+          "en": "Checkpoint: Phase 12 Review",
+          "th": "ด่านทดสอบ: ทบทวนเฟส 12"
+        }
+      ]
+    }
+  ]
+}

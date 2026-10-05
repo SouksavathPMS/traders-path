@@ -1,0 +1,69 @@
+# Backtest Log · Trader's Path (C9, Oct 2026)
+# Reads notes made from the "Backtest Log Entry" template (tag: backtest).
+# Compare average R (= expectancy, 3.4) in-sample vs out-of-sample vs forward (9.3):
+# a big drop out-of-sample usually means the rules were fitted to noise.
+filters:
+  and:
+    - file.hasTag("backtest")
+    - not:
+        - file.inFolder("_System")
+formulas:
+  win: 'if(r > 0, 1, 0)'
+  expectancy: 'r'
+properties:
+  note.r:
+    displayName: R
+  formula.win:
+    displayName: Win (1/0)
+  formula.expectancy:
+    displayName: R (average = expectancy)
+views:
+  - type: table
+    name: By sample
+    groupBy:
+      property: note.sample
+      direction: ASC
+    order:
+      - note.trade_date
+      - note.market
+      - note.setup
+      - note.rules_version
+      - note.r
+      - formula.expectancy
+      - formula.win
+      - note.ugly
+    sort:
+      - property: note.trade_date
+        direction: ASC
+    summaries:
+      note.r: Sum
+      formula.expectancy: Average
+      formula.win: Average
+  - type: table
+    name: By rules version
+    groupBy:
+      property: note.rules_version
+      direction: ASC
+    order:
+      - note.trade_date
+      - note.sample
+      - note.setup
+      - note.r
+      - formula.expectancy
+    summaries:
+      formula.expectancy: Average
+      formula.win: Average
+  - type: table
+    name: All entries
+    order:
+      - note.trade_date
+      - note.market
+      - note.timeframe
+      - note.setup
+      - note.sample
+      - note.r
+      - note.costs_included
+      - note.ugly
+    sort:
+      - property: note.trade_date
+        direction: ASC

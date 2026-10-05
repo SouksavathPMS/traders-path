@@ -1,0 +1,156 @@
+"""B5 · v2 upgrade of 6.5 Elliott + Fibonacci Confluence (additive, idempotent)."""
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+from upgrade_lesson import Lesson
+
+L = Lesson("06 Fibonacci, Elliott Wave & Std Dev/6.5 Elliott + Fibonacci Confluence.md")
+
+# ---------------------------------------------------------------- EN
+L.after_callout("en", "mindset", """
+> [!eli5]
+> Each tool on its own gives you too many possible prices. Elliott says "this pullback is probably wave 2". Fibonacci says "wave 2s often stop around 61.8%". The Elliott rules say "if it goes below the start of wave 1, the idea is dead". Put together, you get one small entry zone, one clear stop and one measured target. You still wait for price to prove the turn before you buy.
+""")
+L.after_callout("en", "eli5", """
+> [!terms]
+> - **Confluence** — several independent tools pointing at the same price zone.
+> - **W1, W2, W3…** — short for wave 1, wave 2, wave 3 *(see 6.2)*.
+> - **Rule-based stop** — a stop at the price where an Elliott rule would break *(see 6.3)*.
+> - **Retracement / extension** — Fibonacci pullback levels / projected targets *(see 6.1)*.
+> - **1.618 × W1** — the common wave-3 target: wave 1's length × 1.618, added to the end of wave 2.
+> - **W5 = W1** — the common wave-5 target: wave 5 as long as wave 1.
+> - **CHoCH (LTF)** — the lower-timeframe change of character that confirms the turn *(see 2.3, 2.6)*.
+> - **R / R:R** — 1R = the loss at the stop; R:R = reward ÷ risk *(see 3.3)*.
+> - **OTE / PD array** — ICT entry zone / an FVG, order block or similar level *(see 5.3–5.5)*.
+""")
+L.before_heading("en", "2.", """
+![[p6-confluence-candles.en.svg]]
+
+> [!walkthrough] Step by step: the wave-2 trade with round numbers
+> Wave 1 runs from **100** to **120** (length **20**).
+> 1. **Wave-2 zone:** 61.8% retracement = 120 − 0.618 × 20 = 120 − 12.36 = **107.64** (50% = 110).
+> 2. **Entry:** after an LTF CHoCH up inside the zone, about **107.6**.
+> 3. **Rule-based stop:** wave 2 may not go below wave 1's start (100) → stop **99.5** (with a small buffer). Risk = 107.64 − 99.5 = **8.14**.
+> 4. **Target (wave 3 = 1.618 × W1):** 107.64 + 1.618 × 20 = 107.64 + 32.36 = **140.0**.
+> 5. **R:R:** reward 32.36 ÷ risk 8.14 ≈ **3.98R**.
+> 6. **So what?** Each number came from a different tool: Fib for the entry, an Elliott rule for the stop, a Fib projection for the target. If any one of them disagrees with structure or liquidity, skip the trade.
+
+> [!check]- Check your understanding: the wave-2 trade
+> **Q1.** Wave 1 runs 50 → 60. Give the 61.8% wave-2 level and the 1.618 wave-3 target from there.
+> > [!answer]-
+> > 61.8% = 60 − 6.18 = 53.82. Target = 53.82 + 16.18 = 70.0.
+""")
+L.before_heading("en", "3.", """
+> [!walkthrough] Step by step: the wave-4 trade on the same impulse
+> Wave 3 ran from **107.64** to **140.0** (length **32.36**).
+> 1. **Wave-4 zone:** 38.2% of wave 3 = 140.0 − 0.382 × 32.36 = 140.0 − 12.36 = **127.64**.
+> 2. **Rule-based stop:** wave 4 may not overlap wave 1's high (120) → stop **119.5**. Risk = 127.64 − 119.5 = **8.14**.
+> 3. **Target (W5 = W1):** 127.64 + 20 = **147.64** → reward **20**.
+> 4. **R:R:** 20 ÷ 8.14 ≈ **2.46R**: smaller than the wave-3 trade, as expected for a late-trend wave.
+> 5. **So what?** Wave 5 trades pay less and fail more often (divergence, exhaustion). Take profit faster and size the same 1R.
+
+> [!analogy]
+> Combining tools is like a **doctor using several tests**. A temperature alone could mean many things; temperature + blood test + X-ray pointing to the same illness makes the diagnosis much more reliable. The doctor still watches how the patient responds to treatment (your LTF trigger).
+>
+> **Where it breaks:** medical tests are independent measurements. Fibonacci and Elliott both come from the same swings, so they are not fully independent; that's why structure, liquidity and time must be part of the confluence too.
+
+> [!check]- Check your understanding: the wave-4 trade
+> **Q1.** Why is the stop for a wave-4 long at wave 1's high and not at wave 2's low?
+> > [!answer]-
+> > Because rule 3 says wave 4 may not overlap wave 1. Below wave 1's high, the count is already invalid, so that's where the idea is wrong.
+""")
+L.before_callout("en", "action", """
+> [!market]
+> - **Forex:** the wave-2 and wave-4 trades work best on 4H–daily impulses in trending pairs.
+> - **Gold:** the zones are wide in dollars, so the rule-based stop can be large; size down rather than tighten *(see 0.4)*.
+> - **Stocks & indices:** check that no earnings or big data release falls between entry and target *(see 0.5, 0.8)*.
+> - **Crypto:** deep liquidation wicks often overshoot the 61.8% to 78.6%; enter only on a close-based CHoCH *(see 0.7)*.
+
+> [!caution]
+> A beautiful Elliott + Fib setup can still lose, and the rule-based stop is often wide. Never tighten the stop to make the R:R look better: size down so the wide stop still costs 1R. If 1R at the correct stop is too small a position to be worth it, skip the trade.
+""")
+L.at_end("en", """
+> [!check]- Final check
+> **Q1.** For each of the two classic trades, name the entry zone, the rule-based stop and the target.
+> > [!answer]-
+> > Wave 2: entry at 50–61.8% of W1; stop below W1's start; target 1.618 × W1 from the W2 low. Wave 4: entry around 38.2% of W3; stop below W1's high; target W5 = W1 from the W4 low.
+> **Q2.** W1 = 200 → 240. Calculate the 61.8% entry, the wave-3 target and the R:R with a stop at 199.
+> > [!answer]-
+> > Entry = 240 − 24.72 = 215.28. Target = 215.28 + 64.72 = 280.0. Risk = 16.28, reward = 64.72 → ≈ 3.98R.
+""")
+
+# ---------------------------------------------------------------- TH
+L.after_callout("th", "mindset", """
+> [!eli5]
+> เครื่องมือแต่ละตัวเดี่ยว ๆ ให้ราคาที่เป็นไปได้มากเกินไป Elliott บอกว่า "การย่อนี้น่าจะเป็นคลื่น 2" ฟีโบนัชชีบอกว่า "คลื่น 2 มักหยุดแถว 61.8%" กฎของ Elliott บอกว่า "ถ้าลงต่ำกว่าจุดเริ่มคลื่น 1 ไอเดียจบ" รวมกันแล้วคุณได้โซนเข้าเล็ก ๆ หนึ่งโซน Stop ที่ชัดเจนหนึ่งจุด และเป้าหมายที่วัดได้หนึ่งจุด แต่คุณก็ยังรอให้ราคาพิสูจน์การกลับตัวก่อนจะซื้อ
+""")
+L.after_callout("th", "eli5", """
+> [!terms]
+> - **Confluence (จุดบรรจบ)** — เครื่องมืออิสระหลายตัวที่ชี้ไปที่โซนราคาเดียวกัน
+> - **W1, W2, W3…** — ย่อมาจากคลื่น 1, คลื่น 2, คลื่น 3 *(ดู 6.2)*
+> - **Stop ตามกฎ (Rule-based stop)** — Stop ที่ราคาซึ่งกฎ Elliott จะถูกละเมิด *(ดู 6.3)*
+> - **รีเทรซเมนต์ / เอกซ์เทนชัน** — ระดับการย่อ / เป้าที่ฉายด้วยฟีโบนัชชี *(ดู 6.1)*
+> - **1.618 × W1** — เป้าคลื่น 3 ที่ใช้บ่อย: ความยาวคลื่น 1 × 1.618 บวกจากจุดจบคลื่น 2
+> - **W5 = W1** — เป้าคลื่น 5 ที่ใช้บ่อย: คลื่น 5 ยาวเท่าคลื่น 1
+> - **CHoCH (บน LTF)** — การเปลี่ยนนิสัยบนไทม์เฟรมต่ำที่ยืนยันการกลับตัว *(ดู 2.3, 2.6)*
+> - **R / R:R** — 1R = ขาดทุนเมื่อโดน Stop  R:R = ผลตอบแทน ÷ ความเสี่ยง *(ดู 3.3)*
+> - **OTE / PD array** — โซนเข้าของ ICT / FVG, Order block หรือระดับลักษณะเดียวกัน *(ดู 5.3–5.5)*
+""")
+L.before_heading("th", "2.", """
+![[p6-confluence-candles.th.svg]]
+
+> [!walkthrough] ไล่ทีละขั้น: เทรดคลื่น 2 ด้วยตัวเลขกลม ๆ
+> คลื่น 1 วิ่งจาก **100** ถึง **120** (ยาว **20**)
+> 1. **โซนคลื่น 2:** รีเทรซเมนต์ 61.8% = 120 − 0.618 × 20 = 120 − 12.36 = **107.64** (50% = 110)
+> 2. **จุดเข้า:** หลัง CHoCH ขึ้นบน LTF ในโซน ราว **107.6**
+> 3. **Stop ตามกฎ:** คลื่น 2 ลงต่ำกว่าจุดเริ่มคลื่น 1 (100) ไม่ได้ → Stop **99.5** (เผื่อเล็กน้อย) ความเสี่ยง = 107.64 − 99.5 = **8.14**
+> 4. **เป้าหมาย (คลื่น 3 = 1.618 × W1):** 107.64 + 1.618 × 20 = 107.64 + 32.36 = **140.0**
+> 5. **R:R:** ผลตอบแทน 32.36 ÷ ความเสี่ยง 8.14 ≈ **3.98R**
+> 6. **แล้วไง?** ตัวเลขแต่ละตัวมาจากเครื่องมือต่างกัน: ฟีโบให้จุดเข้า กฎ Elliott ให้ Stop การฉายฟีโบให้เป้า ถ้าตัวใดตัวหนึ่งขัดกับโครงสร้างหรือสภาพคล่อง ให้ข้ามไม้นั้น
+
+> [!check]- เช็กความเข้าใจ: เทรดคลื่น 2
+> **Q1.** คลื่น 1 วิ่ง 50 → 60 บอกระดับคลื่น 2 ที่ 61.8% และเป้าคลื่น 3 ที่ 1.618 จากจุดนั้น
+> > [!answer]-
+> > 61.8% = 60 − 6.18 = 53.82  เป้า = 53.82 + 16.18 = 70.0
+""")
+L.before_heading("th", "3.", """
+> [!walkthrough] ไล่ทีละขั้น: เทรดคลื่น 4 บนแรงส่งเดียวกัน
+> คลื่น 3 วิ่งจาก **107.64** ถึง **140.0** (ยาว **32.36**)
+> 1. **โซนคลื่น 4:** 38.2% ของคลื่น 3 = 140.0 − 0.382 × 32.36 = 140.0 − 12.36 = **127.64**
+> 2. **Stop ตามกฎ:** คลื่น 4 ทับซ้อนจุดสูงคลื่น 1 (120) ไม่ได้ → Stop **119.5** ความเสี่ยง = 127.64 − 119.5 = **8.14**
+> 3. **เป้าหมาย (W5 = W1):** 127.64 + 20 = **147.64** → ผลตอบแทน **20**
+> 4. **R:R:** 20 ÷ 8.14 ≈ **2.46R**: น้อยกว่าเทรดคลื่น 3 ตามที่คาดสำหรับคลื่นช่วงปลายเทรนด์
+> 5. **แล้วไง?** เทรดคลื่น 5 ได้น้อยกว่าและล้มเหลวบ่อยกว่า (Divergence ความเหนื่อยล้า) ปิดกำไรเร็วขึ้น และใช้ขนาด 1R เท่าเดิม
+
+> [!analogy]
+> การรวมเครื่องมือเหมือน **หมอที่ใช้การตรวจหลายอย่าง** อุณหภูมิอย่างเดียวอาจหมายถึงหลายโรค แต่อุณหภูมิ + ผลเลือด + เอกซเรย์ที่ชี้ไปโรคเดียวกันทำให้การวินิจฉัยน่าเชื่อถือขึ้นมาก หมอก็ยังดูว่าผู้ป่วยตอบสนองต่อการรักษาอย่างไร (สัญญาณ LTF ของคุณ)
+>
+> **จุดที่เปรียบเทียบไม่ได้:** การตรวจทางการแพทย์เป็นการวัดที่อิสระต่อกัน แต่ฟีโบนัชชีและ Elliott มาจาก Swing ชุดเดียวกัน จึงไม่อิสระทั้งหมด โครงสร้าง สภาพคล่อง และเวลาจึงต้องเป็นส่วนหนึ่งของจุดบรรจบด้วย
+
+> [!check]- เช็กความเข้าใจ: เทรดคลื่น 4
+> **Q1.** ทำไม Stop ของ Long คลื่น 4 อยู่ที่จุดสูงคลื่น 1 ไม่ใช่จุดต่ำคลื่น 2?
+> > [!answer]-
+> > เพราะกฎ 3 บอกว่าคลื่น 4 ทับซ้อนคลื่น 1 ไม่ได้ ใต้จุดสูงคลื่น 1 การนับใช้ไม่ได้แล้ว ตรงนั้นจึงเป็นจุดที่ไอเดียผิด
+""")
+L.before_callout("th", "action", """
+> [!market]
+> - **ฟอเร็กซ์:** เทรดคลื่น 2 และคลื่น 4 ได้ผลดีที่สุดบนแรงส่ง 4 ชั่วโมงถึงรายวันในคู่เงินที่มีเทรนด์
+> - **ทองคำ:** โซนกว้างเป็นดอลลาร์ Stop ตามกฎอาจไกล ให้ลดขนาดแทนที่จะบีบ Stop *(ดู 0.4)*
+> - **หุ้นและดัชนี:** เช็กว่าไม่มีงบหรือข้อมูลใหญ่ระหว่างจุดเข้ากับเป้า *(ดู 0.5, 0.8)*
+> - **คริปโต:** ไส้ลึกจากการล้างพอร์ตมักเลย 61.8% ไปถึง 78.6% เข้าเฉพาะเมื่อมี CHoCH ที่ยืนยันด้วยราคาปิด *(ดู 0.7)*
+
+> [!caution]
+> Setup Elliott + ฟีโบที่สวยงามก็ยังขาดทุนได้ และ Stop ตามกฎมักกว้าง ห้ามบีบ Stop เพื่อให้ R:R ดูดีขึ้น ให้ลดขนาดเพื่อให้ Stop ที่กว้างยังเสียแค่ 1R ถ้า 1R ที่ Stop ที่ถูกต้องทำให้โพซิชันเล็กเกินจนไม่คุ้ม ให้ข้ามไม้นั้น
+""")
+L.at_end("th", """
+> [!check]- ทดสอบสุดท้าย
+> **Q1.** สำหรับเทรดคลาสสิกทั้งสองแบบ บอกโซนเข้า Stop ตามกฎ และเป้าหมาย
+> > [!answer]-
+> > คลื่น 2: เข้าที่ 50–61.8% ของ W1 Stop ใต้จุดเริ่ม W1 เป้า 1.618 × W1 จากจุดต่ำ W2 คลื่น 4: เข้าราว 38.2% ของ W3 Stop ใต้จุดสูง W1 เป้า W5 = W1 จากจุดต่ำ W4
+> **Q2.** W1 = 200 → 240 คำนวณจุดเข้าที่ 61.8% เป้าคลื่น 3 และ R:R ถ้า Stop อยู่ที่ 199
+> > [!answer]-
+> > จุดเข้า = 240 − 24.72 = 215.28  เป้า = 215.28 + 64.72 = 280.0  ความเสี่ยง = 16.28 ผลตอบแทน = 64.72 → ≈ 3.98R
+""")
+
+L.set_meta("level", "v2")
+L.save()

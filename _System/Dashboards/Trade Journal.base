@@ -1,0 +1,106 @@
+# Trade Journal · Trader's Path (C8, Oct 2026)
+# Reads notes made from the "Trade Journal Entry" template (tag: journal), wherever you keep them.
+# r = result in R-multiples. Average R = expectancy (lesson 3.4); win rate = average of "Win".
+# The "By grade" view is the A-grade vs C-grade comparison from lesson 4.5.
+filters:
+  and:
+    - file.hasTag("journal")
+    - not:
+        - file.inFolder("_System")
+formulas:
+  win: 'if(r > 0, 1, 0)'
+  expectancy: 'r'
+properties:
+  note.r:
+    displayName: R
+  formula.win:
+    displayName: Win (1/0)
+  formula.expectancy:
+    displayName: R (average = expectancy)
+  note.followed_plan:
+    displayName: Followed plan
+  note.risk_1r:
+    displayName: 1R
+views:
+  - type: table
+    name: All trades
+    order:
+      - note.date
+      - note.market
+      - note.setup
+      - note.direction
+      - note.r
+      - formula.expectancy
+      - formula.win
+      - note.grade
+      - note.followed_plan
+      - note.mistakes
+    sort:
+      - property: note.date
+        direction: DESC
+    summaries:
+      note.r: Sum
+      formula.expectancy: Average
+      formula.win: Average
+  - type: table
+    name: This week
+    filters:
+      and:
+        - 'date >= today() - "1 week"'
+    order:
+      - note.date
+      - note.market
+      - note.setup
+      - note.r
+      - note.grade
+      - note.mistakes
+    sort:
+      - property: note.date
+        direction: ASC
+    summaries:
+      note.r: Sum
+      formula.expectancy: Average
+      formula.win: Average
+  - type: table
+    name: By setup
+    groupBy:
+      property: note.setup
+      direction: ASC
+    order:
+      - note.date
+      - note.market
+      - note.r
+      - formula.expectancy
+      - formula.win
+      - note.grade
+    summaries:
+      note.r: Sum
+      formula.expectancy: Average
+      formula.win: Average
+  - type: table
+    name: By grade
+    groupBy:
+      property: note.grade
+      direction: ASC
+    order:
+      - note.date
+      - note.setup
+      - note.r
+      - note.mistakes
+    summaries:
+      note.r: Sum
+  - type: table
+    name: Broke the plan
+    filters:
+      and:
+        - 'followed_plan != true'
+    order:
+      - note.date
+      - note.setup
+      - note.r
+      - note.grade
+      - note.mistakes
+      - note.emotion_entry
+    sort:
+      - property: note.date
+        direction: DESC

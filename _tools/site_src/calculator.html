@@ -1,0 +1,42 @@
+<div class="doc tool-page">
+<div class="crumbs"><a href="index.html"><span class="l-en">Overview</span><span class="l-th">ภาพรวม</span></a></div>
+<p class="eyebrow"><span class="l-en">Tool</span><span class="l-th">เครื่องมือ</span></p>
+<h1><span class="l-en">Position-size calculator</span><span class="l-th">เครื่องคำนวณขนาดสถานะ</span></h1>
+<p class="lead"><span class="l-en">Size comes from the stop, not from a feeling. Enter your account, the % you're willing to lose, and your entry and stop. The method is the one in lessons 3.2 and 3.3.</span><span class="l-th">ขนาดมาจาก Stop ไม่ใช่ความรู้สึก ใส่บัญชี % ที่ยอมเสีย จุดเข้า และ Stop วิธีคำนวณเหมือนในบทเรียน 3.2 และ 3.3</span></p>
+
+<form id="calc" class="calc" onsubmit="return false">
+  <label class="wide"><span class="l-en">Market</span><span class="l-th">ตลาด</span>
+    <select id="c-market">
+      <option value="fx_usd_quote" data-th="ฟอเร็กซ์ · EUR/USD, GBP/USD, AUD/USD (บัญชี USD)">Forex · EUR/USD, GBP/USD, AUD/USD (USD account)</option>
+      <option value="fx_usd_jpy" data-th="ฟอเร็กซ์ · USD/JPY (บัญชี USD)">Forex · USD/JPY (USD account)</option>
+      <option value="fx_usd_base" data-th="ฟอเร็กซ์ · USD/CHF, USD/CAD (บัญชี USD)">Forex · USD/CHF, USD/CAD (USD account)</option>
+      <option value="gold" data-th="ทองคำ · XAU/USD (1 ล็อต = 100 ออนซ์)">Gold · XAU/USD (1 lot = 100 oz)</option>
+      <option value="stock" data-th="หุ้น / ETF (จำนวนหุ้น)">Stocks / ETFs (shares)</option>
+      <option value="crypto" data-th="คริปโต (หน่วย เช่น BTC)">Crypto (units, e.g. BTC)</option>
+      <option value="custom" data-th="กำหนดเอง (CFD ดัชนี ฟิวเจอร์ส…)">Custom (index CFD, futures…)</option>
+    </select>
+  </label>
+  <label><span class="l-en">Account balance</span><span class="l-th">ยอดเงินในบัญชี</span><input id="c-balance" type="number" inputmode="decimal" value="10000" min="0" step="any"></label>
+  <label><span class="l-en">Risk per trade (%)</span><span class="l-th">ความเสี่ยงต่อเทรด (%)</span><input id="c-risk" type="number" inputmode="decimal" value="1" min="0" step="any"></label>
+  <label><span class="l-en">Entry price</span><span class="l-th">ราคาเข้า</span><input id="c-entry" type="number" inputmode="decimal" value="1.0850" step="any"></label>
+  <label><span class="l-en">Stop-loss price</span><span class="l-th">ราคา Stop loss</span><input id="c-stop" type="number" inputmode="decimal" value="1.0830" step="any"></label>
+  <label><span class="l-en">Target price (optional)</span><span class="l-th">ราคาเป้าหมาย (ไม่บังคับ)</span><input id="c-target" type="number" inputmode="decimal" value="1.0890" step="any"></label>
+  <label data-only="stock"><span class="l-en">Board lot (SET = 100, US = 1)</span><span class="l-th">หน่วยการซื้อขาย (SET = 100, สหรัฐฯ = 1)</span><input id="c-board" type="number" value="100" min="1" step="1"></label>
+  <label data-only="custom"><span class="l-en">Money per 1.00 price move, per 1 lot</span><span class="l-th">เงินต่อราคาขยับ 1.00 ต่อ 1 ล็อต</span><input id="c-vpp" type="number" value="1" min="0" step="any"></label>
+  <label data-only="custom"><span class="l-en">Smallest size step</span><span class="l-th">ขนาดขั้นต่ำที่ปรับได้</span><input id="c-step" type="number" value="0.01" min="0" step="any"></label>
+</form>
+
+<div id="c-out" class="calc-out" aria-live="polite"></div>
+
+<div class="callout c-caution"><div class="callout-title"><span class="l-en">Check before you trade</span><span class="l-th">ตรวจก่อนเทรด</span></div><div class="callout-body">
+<p><span class="l-en">Brokers differ in contract size, minimum lot, fees and rounding. Forex presets assume your account is in USD; for other pairs or account currencies use <b>Custom</b> with your broker's value per point. Gaps and slippage can make the real loss bigger than the stop suggests <i>(see 0.8)</i>. Always compare with your broker's order ticket. <a href="disclaimer.html">Disclaimer</a>.</span><span class="l-th">โบรกเกอร์แต่ละแห่งมีขนาดสัญญา ล็อตขั้นต่ำ ค่าธรรมเนียม และการปัดเศษต่างกัน ค่าตั้งต้นของฟอเร็กซ์สมมติว่าบัญชีเป็น USD สำหรับคู่เงินหรือสกุลเงินบัญชีอื่น ให้ใช้ <b>Custom</b> พร้อมมูลค่าต่อจุดของโบรกเกอร์ ราคากระโดดและ Slippage ทำให้ขาดทุนจริงมากกว่าที่ Stop บอกได้ <i>(ดู 0.8)</i> เทียบกับหน้าส่งคำสั่งของโบรกเกอร์ทุกครั้ง <a href="disclaimer.html">ข้อจำกัดความรับผิดชอบ</a></span></p>
+</div></div>
+
+<h2 class="tool-h2"><span class="l-en">How it calculates</span><span class="l-th">คำนวณอย่างไร</span></h2>
+<ol class="tool-steps">
+<li><span class="l-en">Money at risk = balance × risk %.</span><span class="l-th">เงินที่ยอมเสี่ยง = ยอดเงิน × % ความเสี่ยง</span></li>
+<li><span class="l-en">Loss per 1 lot (or share) = stop distance × contract size (forex 100,000; gold 100 oz; shares 1). For USD/JPY-type pairs the result is converted to USD at the entry price.</span><span class="l-th">ขาดทุนต่อ 1 ล็อต (หรือหุ้น) = ระยะ Stop × ขนาดสัญญา (ฟอเร็กซ์ 100,000 ทองคำ 100 ออนซ์ หุ้น 1) สำหรับคู่แบบ USD/JPY ผลลัพธ์จะแปลงเป็น USD ที่ราคาเข้า</span></li>
+<li><span class="l-en">Size = money at risk ÷ loss per lot, rounded <b>down</b> to the smallest step, so the real risk is never above your limit.</span><span class="l-th">ขนาด = เงินที่ยอมเสี่ยง ÷ ขาดทุนต่อล็อต ปัด<b>ลง</b>ตามขั้นต่ำ เพื่อให้ความเสี่ยงจริงไม่เกินเพดาน</span></li>
+</ol>
+</div>
+<script src="assets/calc.js"></script>

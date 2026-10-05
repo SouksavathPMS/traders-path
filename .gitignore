@@ -1,0 +1,17 @@
+# Built by GitHub Actions (or locally with python3 _tools/build.py); never edit by hand
+site/
+
+# Obsidian per-device state
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.trash/
+
+# Python / OS
+__pycache__/
+*.pyc
+.venv/
+venv/
+.DS_Store
+
+# Local QA output
+_tools/qa/figure_report.json

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{TITLE}} · Trader's Path</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<script>
+  (function () {
+    var l = "en", t = "dark";
+    try { l = localStorage.getItem("tp-lang") || ((navigator.language || "").indexOf("th") === 0 ? "th" : "en");
+          t = localStorage.getItem("tp-theme") || "dark"; } catch (e) {}
+    document.documentElement.setAttribute("data-lang", l);
+    document.documentElement.setAttribute("lang", l);
+    document.documentElement.setAttribute("data-theme", t);
+  })();
+</script>
+</head>
+<body class="{{BODY_CLASS}}">
+<header class="top">
+  <button class="menu-btn" aria-label="Menu">☰</button>
+  <a class="brand" href="index.html"><span class="logo">▲</span><span class="l-en">{{SITE_EN}}</span><span class="l-th">{{SITE_TH}}</span></a>
+  <div class="top-actions">
+    <button class="search-btn" aria-label="Search" title="Search ( / )"><span class="s-ico">⌕</span><span class="l-en">Search</span><span class="l-th">ค้นหา</span><kbd>/</kbd></button>
+    <div class="lang-switch" role="group" aria-label="Language">
+      <button data-set-lang="en">EN</button><button data-set-lang="th">ไทย</button>
+    </div>
+    <button class="theme-btn" aria-label="Toggle theme">◐</button>
+  </div>
+</header>
+<div class="shell">
+  {{SIDEBAR}}
+  <main class="main">{{BODY}}</main>
+</div>
+<footer class="foot">
+  <span class="l-en">Education only — not investment advice. Facts marked “as of” may be out of date.</span><span class="l-th">เพื่อการศึกษาเท่านั้น ไม่ใช่คำแนะนำการลงทุน ข้อมูลที่ระบุ “ณ” วันที่อาจล้าสมัยแล้ว</span>
+  <nav><a href="disclaimer.html"><span class="l-en">Disclaimer</span><span class="l-th">ข้อจำกัดความรับผิดชอบ</span></a> · <a href="glossary.html"><span class="l-en">Glossary</span><span class="l-th">อภิธานศัพท์</span></a> · <a href="calculator.html"><span class="l-en">Calculator</span><span class="l-th">เครื่องคำนวณ</span></a></nav>
+</footer>
+<script src="assets/app.js"></script>
+</body>
+</html>

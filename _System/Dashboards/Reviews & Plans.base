@@ -1,0 +1,55 @@
+# Reviews & Plans · Trader's Path (C8, Oct 2026)
+# Weekly and monthly reviews (tag: review) and your trading plan / investment policy versions (tag: plan).
+filters:
+  and:
+    - or:
+        - file.hasTag("review")
+        - file.hasTag("plan")
+    - not:
+        - file.inFolder("_System")
+views:
+  - type: table
+    name: Weekly reviews
+    filters:
+      and:
+        - 'review == "weekly"'
+    order:
+      - note.date
+      - note.total_r
+      - note.trades
+      - note.a_grade_pct
+      - note.r_a_grade
+      - note.r_c_grade
+      - note.top_mistake
+      - note.one_change
+    sort:
+      - property: note.date
+        direction: DESC
+    summaries:
+      note.total_r: Sum
+  - type: table
+    name: Monthly reviews
+    filters:
+      and:
+        - 'review == "monthly"'
+    order:
+      - note.date
+      - note.total_r
+      - note.trades
+      - note.max_drawdown_pct
+    sort:
+      - property: note.date
+        direction: DESC
+  - type: table
+    name: Plans
+    filters:
+      and:
+        - file.hasTag("plan")
+    order:
+      - file.name
+      - note.plan
+      - note.version
+      - note.date
+    sort:
+      - property: note.date
+        direction: DESC
